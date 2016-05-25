@@ -56,7 +56,7 @@ def value_range(data):
     range : number
         The distance between the lowest and the highest value of ``data``.
     """
-    return 0.0
+    return data.max() - data.min()
 
 
 def rescale(data, lower=0.0, upper=1.0):
