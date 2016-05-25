@@ -98,7 +98,8 @@ def cut_to_same_size(data_1, data_2):
         The two original arrays, the longer one cut at the end to the length of
         the shorter one so that both arrays have the same length.
     """
-    return data_1, data_2
+    min_len = min([len(data_1), len(data_2)])
+    return data_1[:min_len], data_2[:min_len]
 
 
 def pad_to_same_size(data_1, data_2, pad_with=0.0):
